@@ -59,6 +59,10 @@ body {
     
 
 }
+
+
+    
+
 .logo {
     text-transform: capitalize;
     font-size: 16px;
@@ -83,16 +87,21 @@ body {
     font-weight: bold;
 
 }
-.menu{
+
+
+.menu {
     padding: 26px 0;
+    font-weight: bold;
 }
-.menu li:last-child{
+
+.menu li:last-child {
     position: relative;
 }
-.menu li:last-child::before{
+
+.menu li:last-child::before {
     position: absolute;
     content: "";
-    background: url(../images/viber.png);
+    background: url(./image/icons/viber.png);
     background-position: center;
     background-repeat: no-repeat;
     width: 22px;
@@ -100,6 +109,89 @@ body {
     top: 0px;
     left: -22px;
 }
+
+.menu li a {
+    color: red;
+}
+
+.menu li a:hover {
+    color: blue;
+    background-color: yellow;
+    font-size: large;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 15%;
+}
+
+
+.header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+}
+
+.header .menu-btn {
+   display: none;
+}
+
+
+.header .menu-icon {
+    display: flex;
+    width: 70px;
+    border: 1px solid red;
+    padding: 20px;
+    position: relative;
+    user-select: none;
+    cursor: grab;
+}
+
+
+.header .menu-icon .navicon {
+    display: block;
+    border: 2px solid yellow;
+    width: 25px;
+    position: relative;
+    transition: backgroung 0.2s ease-out;
+}
+
+.header .menu-icon .navicon::before,
+.header .menu-icon .navicon::after {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 100%;
+    transition: all 0.2s ease-out;
+}
+
+.header .menu-icon .navicon::before {
+    border: 2px solid green;
+    top: 10px;
+}
+
+.header .menu-icon .navicon::after {
+    border: 2px solid red;
+    top: -10px;
+}
+
+
+.header .menu-btn:checked~.menu-icon .navicon {
+    border: transparent;
+}
+
+
+.header .menu-btn:checked~.menu-icon .navicon::before {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+.header .menu-btn:checked~.menu-icon .navicon::after {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.header .menu-btn:checked~.menu {
+    max-height: 100%;
+}
+
 footer {
     background: black;
     color: gray;
@@ -172,7 +264,7 @@ footer p {
     background-color: black;
     top: 10px;
 }
-/*СЕКЦИЯ 2*/
+
 .s2 {
     display: flex;
     flex-flow: column;
@@ -197,6 +289,14 @@ footer p {
     position: relative;
 
 }
+
+.s2_list_item:hover {
+    background-color: rgb(144, 211, 183);
+    width: 20px;
+    height: 200px;
+}
+
+
 .s2_list_item::before{
     content: "";
     position: absolute;
@@ -206,6 +306,10 @@ footer p {
     border-radius: 50%;
     top: -29%;
     left: 23%;
+}
+.s2_list_item::before:hover{
+    top: -50px;
+    left: 50px;
 }
 .s2_list_item:nth-child(1):before{
     background: yellow url(../images/icon.png);
@@ -242,6 +346,58 @@ footer p {
 }
 .s2_list_item p:first-child{
     padding-top: 40px;
+}
+
+.s3{
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    background-color: #535353;
+    width: auto;
+    padding: 100px 0;
+}
+
+.ant-carousel-hider{
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    width: 320px;
+    overflow: hidden;
+}
+
+.ant-carousel-list{
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    width: auto;
+
+}
+
+.ant-carousel-element{
+    margin: 20px;
+}
+
+.ant-carousel-element img{
+    width: 280px;
+    height: 230px;
+    border: 15px solid orange;
+}
+
+.ant-carousel-element p{
+    font-size: 16px;
+    font-weight: bold;
+    padding-left: 50px;
+    margin-top: 16px;
+    position: relative;
+}
+.ant-carousel-element p::before{
+    position: absolute;
+    content: "";
+    width: 38px;
+    border: 1px solid yellow;
+    top: 10px;
+    background-color: yellow;
+    left: 0;
 }
 .s4 {
     display: flex;
@@ -295,4 +451,104 @@ footer p {
     display: none;
 }
 
+.s5 {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    background-color: #303030;
+    padding-top: 20px;
+  }
+  
+  .s5_title {
+    text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    padding-left: 54px;
+    padding-right: 75px;
+    color: white;
+  }
+  
+  .s5_list {
+    padding-top: 40px;
+    padding-bottom: 25px;
+    position: relative;
+  }
+  
+  .s5_list:not(:first-child)::before {
+    position: absolute;
+    content: "";
+    width: 32px;
+    border: 1px solid #ffe100;
+    background-color: #ffe100;
+    top: 15px;
+    left: 54px;
+  }
+  
+  .s5_list-item,
+  .s5_list-contact {
+    position: relative;
+    padding-left: 95px;
+    padding-right: 25px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    color: #9c9a9a;
+    line-height: 30px;
+  }
+  
+  .s5_list-contact {
+    padding-left: 54px;
+  }
+  
+  .s5_list-contact a {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .s5_list-contact p {
+    font-size: 14px;
+    color: #7b7b7b;
+  }
+  
+  .s5_list-item::before {
+    position: absolute;
+    content: "";
+    width: 32px;
+    height: 32px;
+    background: url(../images/check.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    top: -3px;
+    left: 54px;
+  }
+  
+  .s5_list-contact:last-child p {
+    position: relative;
+    padding-left: 30px;
+  }
+  
+  .s5_list-contact:last-child p::before {
+    position: absolute;
+    content: "";
+    width: 22px;
+    height: 22px;
+    background: url(../images/viber.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    top: 4px;
+    left: 0;
+  }
 
+  .menu li{
+      color: red;
+ }
+  
+ .menu li a:hover{
+     color:blue;
+     font-size: large;
+     box-shadow: 0 0 10px rgba(0,0,0,0.5);
+     border-radius: 15%;
+     background-color: yellow;
+ }
