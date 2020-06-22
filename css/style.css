@@ -68,7 +68,6 @@ body {
 .logo {
     text-transform: capitalize;
     font-size: 16px;
-    padding-top: 38px;
     position: relative;
 }
 .logo::before{
