@@ -97,6 +97,7 @@ body {
 
 .menu li:last-child {
     position: relative;
+    padding-left: 20px;
 }
 
 
@@ -110,7 +111,7 @@ body {
     width: 22px;
     height: 22px;
     top: 0px;
-    left: -22px;
+    left: 0px;
 }
 
 .menu li a {
@@ -580,3 +581,74 @@ footer p {
      border-radius: 15%;
      background-color: yellow;
  }
+ @media (width: 768px){
+     .container{
+         width: 768px;
+     }
+     .header_nav{
+         margin: 0 40px;
+     }
+     .header .menu-icon{
+         display: none;
+     }
+     
+         .menu{
+         display: flex;
+         flex-flow: row;
+         justify-content: space-between;
+         align-items: center;
+         overflow: visible;
+
+     }
+
+     .menu li{
+         margin-right: 10px;
+        padding-left: 20px;
+    }
+
+      .menu li:nth-child(1) {
+          position: relative;
+
+      }
+     
+      .menu li:nth-child(1)::after{
+        content: "";  
+        position: absolute;
+        width: 2px;
+        height: 22px;
+        background: grey;
+        top: 0;
+        right: -7px;
+    }
+    .s1{
+        padding: 253px 40px 0;
+    }
+    .s1_title{
+        font-size: 50px;
+
+    }
+     .s1_list_item{
+         font-size: 20px;
+     }
+     .s1_list_item::before{
+         top: 4px;
+     }
+
+    .s2_list{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        margin-right: 20px;
+    }
+    .s2_list:last-child{
+        margin-right: 0;
+    }
+    .s2_title{
+        font-size: 38px;
+        padding: 80px 129px 0;
+    }
+
+    
+ }
+    
+
