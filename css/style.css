@@ -647,6 +647,91 @@ footer p {
         font-size: 38px;
         padding: 80px 129px 0;
     }
+    .ant-carousel-hider{
+        width: 768px;
+    }
+    .ant-carousel-element img{
+        width: 334px;
+        height: 240px;
+
+    }
+    .s4{
+        align-items: flex-start;
+
+    }
+    .s4_list{
+        padding: 38px 20px 80px 306px;
+    }
+    .s4_title{
+        padding: 84px 72px 0 156px ;
+        font-size: 23px;
+        text-align: left;
+    }
+    .s4_list_item:last-child{
+        display: block;
+    }
+    .s4_list::before{
+        height: 60%;
+        top: 15%;
+        left: 306px;
+
+    }
+    .s4_title::before {
+       width: 75px;
+       height: 50px;
+       background: url(../images/kavychki.png);
+       top: 58%;
+       left: 7%;
+    }
+    .s5{
+        flex-flow: row wrap;
+        padding-left: 129px;
+        padding-top: 79px;
+    }
+    .s5 div{
+        width: 246px;
+        margin-right: 20px;
+        margin-bottom: 40px;
+    }
+    .s5_list{
+        padding: 0;
+    }
+    .s5_list:not(:first-child){
+        top: 42px;
+    }
+    .s5_list:not(:first-child)::before{
+        left: 0;
+        top: -20px;
+
+    }
+    
+
+    
+    .s5_list-contact,
+    .s5_list-item{
+        margin: 0;
+        padding: 0;
+    }
+    .s5_list-item{
+        padding-left: 35px;
+    }
+    .s5_list-item::before{
+        top: 0px;
+        left: 0px;
+
+    }
+    .s5_title{
+        padding: 0;
+    }
+    footer{
+        padding: 22px 0;
+    }
+    footer p{
+        font-size: 14px;
+    }
+
+    
+
 
     
  }
