@@ -729,6 +729,10 @@ footer p {
     footer p{
         font-size: 14px;
     }
+}
+    
+    
+    
     @media(width: 1280px){
         
         .container {
@@ -948,6 +952,6 @@ footer p {
 
 
     
- }
+ 
     
 
