@@ -1,16 +1,16 @@
 let name;
 console.log(name);
 
-name="Alekasa"
+name = "Alekasa";
 console.log(name);
 
-const lastName = 'Hrevtsova';
+const lastName = "Hrevtsova";
 console.log(lastName);
 
 let myName = "Aleksandra";
 console.log(myName);
 
-let count = '30';
+let count = "30";
 console.log(count);
 console.log(typeof count);
 
@@ -34,10 +34,10 @@ let cart = null;
 console.log(cart);
 console.log(typeof cart);
 
-console.log(5>7);
-console.log(4>2);
+console.log(5 > 7);
+console.log(4 > 2);
 console.log(3 >= 3);
-console.log(3 >=4);
+console.log(3 >= 4);
 
 console.log(5 === "5");
 console.log(true === 1);
@@ -59,7 +59,7 @@ let num = 12;
 console.log(num);
 console.log(typeof num);
 
-num = num +"";
+num = num + "";
 console.log(num);
 console.log(typeof num);
 
@@ -71,7 +71,7 @@ newNum = String(newNum);
 console.log(newNum);
 console.log(typeof newNum);
 
-let stringNum = '34';
+let stringNum = "34";
 console.log(stringNum);
 console.log(typeof stringNum);
 
@@ -91,19 +91,19 @@ numValue = Boolean(numValue);
 console.log(numValue);
 console.log(typeof numValue);
 
-console.log(Boolean(0));//false
-console.log(Boolean(""));//false
-console.log(Boolean(null));//false
-console.log(Boolean(undefined));//false
-console.log(Boolean(NaN));//false
-console.log(Boolean(false));//false
+console.log(Boolean(0)); //false
+console.log(Boolean("")); //false
+console.log(Boolean(null)); //false
+console.log(Boolean(undefined)); //false
+console.log(Boolean(NaN)); //false
+console.log(Boolean(false)); //false
 
-console.log(Boolean(1));//true
-console.log(Boolean(" "));//true
-console.log(Boolean(` `));//true
-console.log(Boolean(' '));//true
-console.log(Boolean(Infinity));//true
-console.log(Boolean(true));//true
+console.log(Boolean(1)); //true
+console.log(Boolean(" ")); //true
+console.log(Boolean(` `)); //true
+console.log(Boolean(" ")); //true
+console.log(Boolean(Infinity)); //true
+console.log(Boolean(true)); //true
 
 //логические операторы
 //&& - логическое и
@@ -113,12 +113,12 @@ console.log(false && true);
 console.log(1 && 0 && true && false);
 console.log(1 && false && true && 0);
 //|| - логическое или
-console.log(1 || true ||100);
+console.log(1 || true || 100);
 console.log(true || 1);
 console.log(0 || true);
-console.log(false || true || 1 );
+console.log(false || true || 1);
 console.log("" || 0 || undefined || false);
-console.log(NaN || false || null |0);
+console.log(NaN || false || null | 0);
 // ! - логическое не
 console.log(!1);
 console.log(!0);
@@ -135,6 +135,72 @@ console.log(!!" ");
 console.log(!!NaN);
 console.log(!!undefined);
 console.log(!!null);
+
+// let msg=confirm('Are you ready')
+// console.log(msg);
+
+// let greet= alert('welcome');
+// console.log(greet);
+// let userData =prompt("Enter your name here");
+// console.log(userData)
+
+//Ветвления
+if (!1 > 0) {
+  console.log("Hello World");
+}
+
+// let massage = "Добро пожаловать!";
+// let enteredData = prompt("ВВедите число от 1 до 5");
+
+// if (enteredData >= 1 && enteredData <= 5) {
+//   console.log("Спасибо, вы ввели правильное число!");
+// } else {
+//   console.log("Вы ввели неправильное число");
+// }
+//циклы
+//i=i+1||i+=1||i++
+for(let i=0; i<10; i+=1){
+  console.log(`итеграция № ${i+1} ${i+1}`);
+
+}
+const results=[1, 11, 23, 45, 32, 78, 988, 48];
+console.log(results);
+
+for (let i=0; i<results.length; i +=1){
+  if (results[i]>=100);{
+  console.log("трёхзначный элемент", results[i]);
+}  if(results[i]>=10 && results[i]<100){
+
+  console.log();
+} 
+
+}
+  // const projectBody = document.querySelector('body');
+  // console.log(projectBody);
+
+  // const headerWrapper = document.querySelector('.header_wrapper');
+  // console.log(headerWrapper);
+  // console.dir(headerWrapper);
+
+  // console.log(headerWrapper.title);
+  // headerWrapper.title = 'Hello!';
+  // console.log(headerWrapper.title);
+
+  // const logo = document.querySelector('.logo');
+  // console.log(logo.textContent);
+
+  // logo.textContent='Photo Diary';
+  // logo.style.fontSize = '56px';
+  // logo.classList.add ('example');
+
+  // const navMenu= document.getElementById('main-logo');
+  // console.log(logo);
+  // console.dir(logo);
+  // console.log(logo.textContent);
+
+  // logo.textContent = "Photo diary";
+  // logo.style.fontSize = "36px";
+  //font-size
 
 
 

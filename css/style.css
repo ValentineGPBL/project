@@ -31,9 +31,9 @@ a{
   color: black;
 }
 
-body {
-    background: coral;
-    
+.example{
+    background-color: hotpink;
+    color: white;
 }
 
 
@@ -105,7 +105,7 @@ body {
 .menu li:last-child::before {
     position: absolute;
     content: "";
-    background: url(./image/icons/viber.png);
+    background: url(../images/viber.png);
     background-position: center;
     background-repeat: no-repeat;
     width: 22px;
