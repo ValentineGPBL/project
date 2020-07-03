@@ -7,30 +7,33 @@ const Ant = function (crslId) {
   } else {
     this.crslRoot = document.querySelector(".ant-carousel");
   }
-
+  // все объекты нашего слайдера
+  // list
   this.crslList = this.crslRoot.querySelector(".ant-carousel-list");
   this.crslElements = this.crslRoot.querySelectorAll(".ant-carousel-element");
   this.crslElemFirst = this.crslRoot.querySelector(".ant-carousel-element");
-
+  // left_arrow
   this.leftArrow = this.crslRoot.querySelector("div.ant-carousel-arrow-left");
   this.rightArrow = this.crslRoot.querySelector("div.ant-carousel-arrow-right");
   this.indicatorDots = this.crslRoot.querySelector(".ant-carousel-dots");
-  console.log(this.crslList, this.crslElements, this.crslElemFirst, this.leftArrow,   this.rightArrow, this.indicatorDots);
 
-    this.options = Ant.defaults;
-  Ant.initialize();
+  // запуск слайдера
+  this.options = Ant.defaults;
+  Ant.initialize(this);
 };
 
 Ant.defaults = {
-  
-  elemVisible: 1, 
-  loop: true, 
-  auto: true, 
-  interval: 3000, 
-  speed: 1000, 
-  touch: true, 
-  arrows: true, 
-  dots: true, 
+  // Default options for the carousel
+
+  // visibleItem
+  elemVisible: 1, // Кол-во отображаемых элементов в карусели
+  loop: true, // Бесконечное зацикливание карусели
+  auto: true, // Автоматическая прокрутка
+  interval: 3000, // Интервал между прокруткой элементов (мс)
+  speed: 1000, // Скорость анимации (мс)
+  touch: true, // Прокрутка  прикосновением
+  arrows: true, // Прокрутка стрелками
+  dots: true, // Индикаторные точки
 };
 
 Ant.prototype.elemPrev = function (num) {
@@ -42,7 +45,7 @@ Ant.prototype.elemPrev = function (num) {
   if (this.options.dots) this.dotOff(this.currentElement);
 
   if (!this.options.loop) {
-    
+    // сдвиг вправо без цикла
     this.currentOffset += this.elemWidth * num;
     this.crslList.style.marginLeft = this.currentOffset + "px";
     if (this.currentElement == 0) {
@@ -52,7 +55,7 @@ Ant.prototype.elemPrev = function (num) {
     this.rightArrow.style.display = "block";
     this.touchNext = true;
   } else {
-  
+    // сдвиг вправо с циклом
     let elm,
       buf,
       this$ = this;
@@ -63,15 +66,17 @@ Ant.prototype.elemPrev = function (num) {
       this.crslList.insertBefore(buf, this.crslList.firstElementChild);
       elm.remove();
     }
-  
+    // this.crslList.style.marginLeft = "-" + this.elemWidth * num + "px";
+    // let compStyle = window.getComputedStyle(this.crslList).marginLeft;
     this.crslList.style.cssText =
       "transition:margin " + this.options.speed + "ms ease;";
-      setTimeout(function () {
+    // this.crslList.style.marginLeft = "0px";
+    setTimeout(function () {
       this$.crslList.style.cssText = "transition:none;";
     }, this.options.speed);
   }
 };
-
+// в видео 04 06
 Ant.prototype.elemNext = function (num) {
   num = num || 1;
 
@@ -81,7 +86,8 @@ Ant.prototype.elemNext = function (num) {
   if (this.options.dots) this.dotOff(this.currentElement);
 
   if (!this.options.loop) {
-      this.currentOffset -= this.elemWidth * num;
+    // сдвиг влево без цикла
+    this.currentOffset -= this.elemWidth * num;
     this.crslList.style.marginLeft = this.currentOffset + "px";
     if (this.currentElement == this.dotsVisible - 1) {
       this.rightArrow.style.display = "none";
@@ -90,7 +96,8 @@ Ant.prototype.elemNext = function (num) {
     this.leftArrow.style.display = "block";
     this.touchPrev = true;
   } else {
-       let elm,
+    // сдвиг влево с циклом
+    let elm,
       buf,
       this$ = this;
     this.crslList.style.cssText =
@@ -114,31 +121,33 @@ Ant.prototype.dotOn = function (num) {
     "background-color:#BBB; cursor:pointer;";
 };
 
+// Aleksandra Hrevtsova, [03.07.20 18:32]
 Ant.prototype.dotOff = function (num) {
   this.indicatorDotsAll[num].style.cssText =
     "background-color:#556; cursor:default;";
 };
 
+// 05 06
 Ant.initialize = function (that) {
-
-  that.elemCount = that.crslElements.length; 
-  that.dotsVisible = that.elemCount; 
+  // Constants
+  that.elemCount = that.crslElements.length; // Количество элементов
+  that.dotsVisible = that.elemCount; // Число видимых точек
   let elemStyle = window.getComputedStyle(that.crslElemFirst);
   that.elemWidth =
-    that.crslElemFirst.offsetWidth + 
+    that.crslElemFirst.offsetWidth + // Ширина элемента (без margin)
     parseInt(elemStyle.marginLeft) +
     parseInt(elemStyle.marginRight);
 
-
+  // Variables
   that.currentElement = 0;
   that.currentOffset = 0;
   that.touchPrev = true;
   that.touchNext = true;
   let xTouch, yTouch, xDiff, yDiff, stTime, mvTime;
   let bgTime = getTime();
- 
+  // console.log(bgTime);
 
- 
+  // Functions
   function getTime() {
     return new Date().getTime();
   }
@@ -153,9 +162,9 @@ Ant.initialize = function (that) {
     }, that.options.interval);
   }
 
- 
+  // Start initialization
   if (that.elemCount <= that.options.elemVisible) {
-    
+    // Отключить навигацию
     that.options.auto = false;
     that.options.touch = false;
     that.options.arrows = false;
@@ -165,15 +174,16 @@ Ant.initialize = function (that) {
   }
 
   if (!that.options.loop) {
-  
+    // если нет цикла - уточнить количество точек
     that.dotsVisible = that.elemCount - that.options.elemVisible + 1;
-    that.leftArrow.style.display = "none"; 
-    that.touchPrev = false; 
-    that.options.auto = false; 
+    that.leftArrow.style.display = "none"; // отключить левую стрелку
+    that.touchPrev = false; // отключить прокрутку прикосновением вправо
+    that.options.auto = false; // отключить автопркрутку
   } else if (that.options.auto) {
-   
+    // инициализация автопрокруки
     setAutoScroll();
-       that.crslList.addEventListener(
+    // Остановка прокрутки при наведении мыши на элемент
+    that.crslList.addEventListener(
       "mouseenter",
       function () {
         clearInterval(that.autoScroll);
@@ -184,7 +194,8 @@ Ant.initialize = function (that) {
   }
 
   if (that.options.touch) {
-       that.crslList.addEventListener(
+    // инициализация прокрутки прикосновением
+    that.crslList.addEventListener(
       "touchstart",
       function (e) {
         xTouch = parseInt(e.touches[0].clientX);
@@ -220,6 +231,7 @@ Ant.initialize = function (that) {
   }
 
   if (that.options.arrows) {
+    // инициализация стрелок
     if (!that.options.loop)
       that.crslList.style.cssText =
         "transition:margin " + that.options.speed + "ms ease;";
@@ -250,15 +262,18 @@ Ant.initialize = function (that) {
     that.rightArrow.style.display = "none";
   }
 
-  if (that.options.dots) {
-      let sum = "",
+// Aleksandra Hrevtsova, [03.07.20 18:32]
+if (that.options.dots) {
+    // инициализация индикаторных точек
+    let sum = "",
       diffNum;
     for (let i = 0; i < that.dotsVisible; i++) {
       sum += '<span class="ant-dot"></span>';
     }
     that.indicatorDots.innerHTML = sum;
     that.indicatorDotsAll = that.crslRoot.querySelectorAll("span.ant-dot");
-      for (let n = 0; n < that.dotsVisible; n++) {
+    // Назначаем точкам обработчик события 'click'
+    for (let n = 0; n < that.dotsVisible; n++) {
       that.indicatorDotsAll[n].addEventListener(
         "click",
         function () {
@@ -270,12 +285,12 @@ Ant.initialize = function (that) {
             bgTime = getTime();
             that.elemNext(diffNum);
           }
-         
+          // Если n == that.currentElement ничего не делаем
         },
         false
       );
     }
-    that.dotOff(0); 
+    that.dotOff(0); // точка[0] выключена, остальные включены
     for (let i = 1; i < that.dotsVisible; i++) {
       that.dotOn(i);
     }

@@ -1,20 +1,23 @@
 @font-face {
     font-family: "OpenSans";
     src: url(../fonts/OpenSans/OpenSans-Regular.eot) format("embedded-opentype"),
-         url(../fonts/OpenSans/OpenSans-Regular.ttf) format("truetype"),
-         url(../fonts/OpenSans/OpenSans-Regular.woff) format("woff");
+        url(../fonts/OpenSans/OpenSans-Regular.ttf) format("truetype"),
+        url(../fonts/OpenSans/OpenSans-Regular.woff) format("woff");
 
 }
+
 @font-face {
     font-family: "GothamPro-Bold";
     src: url(../fonts/GothamPro/GothamPro-Bold.eot) format("embedded-opentype"),
-     url(../fonts/GothamPro/GothamPro-Bold.ttf) format("truetype"),
-     url(../fonts/GothamPro/GothamPro-Bold.woof) format("woof");
+        url(../fonts/GothamPro/GothamPro-Bold.ttf) format("truetype"),
+        url(../fonts/GothamPro/GothamPro-Bold.woof) format("woof");
 }
+
 @font-face {
     font-family: "Coustard";
     src: url(../fonts/Coustard-Regular.ttf) format("truetype")
 }
+
 * {
     margin: 0;
     padding: 0;
@@ -22,16 +25,16 @@
     font-family: "OpenSans";
 }
 
-ul {  
+ul {
     list-style: none;
 }
 
-a{
-  text-decoration: none;
-  color: black;
+a {
+    text-decoration: none;
+    color: black;
 }
 
-.example{
+.example {
     background-color: hotpink;
     color: white;
 }
@@ -41,7 +44,7 @@ a{
 .container {
     width: 320px;
     margin: 0 auto;
-    
+
 }
 
 .header_wrapper {
@@ -51,6 +54,7 @@ a{
     top: 10px;
     z-index: 100;
 }
+
 .header_nav {
     display: flex;
     flex-flow: row wrap;
@@ -58,19 +62,20 @@ a{
     align-items: center;
     margin: 0 20px;
     padding: 38px 0 38px 55px;
-    
+
 
 }
 
 
-    
+
 
 .logo {
     text-transform: capitalize;
     font-size: 16px;
     position: relative;
 }
-.logo::before{
+
+.logo::before {
     content: "";
     position: absolute;
     background: url(../images/iconsofa.png);
@@ -83,7 +88,8 @@ a{
     left: -50px;
     top: -12px;
 }
-.logo span{
+
+.logo span {
     text-transform: uppercase;
     font-weight: bold;
 
@@ -91,8 +97,8 @@ a{
 
 
 .menu {
-   font-weight: bold;
-   overflow: hidden;
+    font-weight: bold;
+    overflow: hidden;
 }
 
 .menu li:last-child {
@@ -118,20 +124,20 @@ a{
     color: red;
 }
 
-.menu li a::before{
-   
-        --size: 0;
+.menu li a::before {
 
-        content: '';
-        position: absolute;
-        left: var(--x);
-        top: var(--y);
-        width: var(--size);
-        height: var(--size);
-        background: radial-gradient(circle closest-side, #4405f7, transparent);
-        transform: translate(-50%, -50%);
-        transition: width .2s ease, height .2s ease;
-    }
+    --size: 0;
+
+    content: '';
+    position: absolute;
+    left: var(--x);
+    top: var(--y);
+    width: var(--size);
+    height: var(--size);
+    background: radial-gradient(circle closest-side, #4405f7, transparent);
+    transform: translate(-50%, -50%);
+    transition: width .2s ease, height .2s ease;
+}
 
 
 .menu li a:hover {
@@ -142,7 +148,7 @@ a{
     border-radius: 15%;
 }
 
-.menu li a:focus{
+.menu li a:focus {
     color: red;
 }
 
@@ -154,16 +160,16 @@ a{
 }
 
 .header .menu-btn {
-   display: none;
+    display: none;
 }
 
 
 .header .menu-icon {
     display: flex;
-    
-   
+
+
     width: 25px;
-   
+
     position: relative;
     user-select: none;
     cursor: grab;
@@ -190,12 +196,12 @@ a{
 }
 
 .header .menu-icon .navicon::before {
-   background: green;
+    background: green;
     top: 10px;
 }
 
 .header .menu-icon .navicon::after {
-    background:  red;
+    background: red;
     top: -10px;
 }
 
@@ -224,6 +230,7 @@ footer {
     color: gray;
     padding: 24px 0;
 }
+
 .s1 {
     padding-top: 225px;
     padding-left: 20px;
@@ -236,33 +243,34 @@ footer {
     color: white;
     background-size: cover;
     background-repeat: no-repeat;
-    
+
 }
 
 
-.s1_title{
+.s1_title {
     font-size: 35px;
     font-family: "GothamPro-Bold";
 }
 
-.s1_list{
+.s1_list {
     padding-top: 24px;
     padding-bottom: 134px;
 }
-.s1_list_item{
+
+.s1_list_item {
     font-size: 14px;
     padding-left: 24px;
     font-family: "OpenSans";
     position: relative;
     margin-bottom: 10px;
-    
+
 }
 
-.s1_list_item span{
+.s1_list_item span {
     color: yellow;
 }
 
-.s1_list_item::before{
+.s1_list_item::before {
     position: absolute;
     content: "";
     background: url(../images/iconstar.png);
@@ -273,7 +281,8 @@ footer {
     background-repeat: no-repeat;
 
 }
-.s1_bottom_arrow{
+
+.s1_bottom_arrow {
     transform: rotate(90deg);
     color: yellow;
     font-size: 24px;
@@ -281,11 +290,13 @@ footer {
     margin: 0 110px;
     padding-right: 54px;
 }
+
 footer p {
     margin: 0 20px;
     font-size: 12px;
     text-align: center;
 }
+
 .footer_wrapper {
     width: 100%;
     background-color: black;
@@ -297,7 +308,8 @@ footer p {
     flex-flow: column;
     align-items: center;
 }
-.s2_title{
+
+.s2_title {
     display: block;
     text-align: center;
     font-size: 26px;
@@ -305,10 +317,12 @@ footer p {
     padding: 64px 25px 0;
     margin-bottom: 74px;
 }
-.s2_list{
+
+.s2_list {
     padding-bottom: 12px;
 }
-.s2_list_item{
+
+.s2_list_item {
     margin-bottom: 60px;
     width: 170px;
     height: 170px;
@@ -317,16 +331,16 @@ footer p {
 }
 
 .s2_list_item:hover {
-    background-color:black;
+    background-color: black;
     color: white;
     border: 10px solid yellow;
     transform: scale(1.2);
-   
-   
+
+
 }
 
 
-.s2_list_item::before{
+.s2_list_item::before {
     content: "";
     position: absolute;
     background-color: yellow;
@@ -336,36 +350,41 @@ footer p {
     top: -29%;
     left: 23%;
 }
-.s2_list_item::before:hover{
+
+.s2_list_item::before:hover {
     top: -50px;
     left: 50px;
 }
-.s2_list_item:nth-child(1):before{
+
+.s2_list_item:nth-child(1):before {
     background: yellow url(../images/icon.png);
     background-repeat: no-repeat;
     background-position: center;
-    
+
 }
-.s2_list_item:nth-child(2):before{
+
+.s2_list_item:nth-child(2):before {
     background: yellow url(../images/icon\ \(1\).png);
     background-repeat: no-repeat;
     background-position: center;
-    
+
 }
-.s2_list_item:nth-child(3):before{
+
+.s2_list_item:nth-child(3):before {
     background: yellow url(../images/icon\ \(2\).png);
     background-repeat: no-repeat;
     background-position: center;
-    
+
 }
-.s2_list_item:nth-child(4):before{
+
+.s2_list_item:nth-child(4):before {
     background: yellow url(../images/icon\ \(3\).png);
     background-repeat: no-repeat;
     background-position: center;
-    
+
 }
 
-.s2_list_item p{
+.s2_list_item p {
     display: block;
     text-align: center;
     padding-bottom: 5px;
@@ -373,28 +392,32 @@ footer p {
     font-weight: bold;
 
 }
-.s2_list_item p:first-child{
+
+.s2_list_item p:first-child {
     padding-top: 40px;
 }
 
-.s3{
+.s3 {
     display: flex;
     flex-flow: row;
     justify-content: center;
     background-color: #535353;
     width: auto;
     padding: 100px 0;
+    position: relative;
 }
 
-.ant-carousel-hider{
+.ant-carousel-hider {
     display: flex;
     flex-flow: row;
     justify-content: flex-start;
     width: 320px;
     overflow: hidden;
+    margin: 0 20px;
+    position: relative;
 }
 
-.ant-carousel-list{
+.ant-carousel-list {
     display: flex;
     flex-flow: row;
     justify-content: flex-start;
@@ -402,24 +425,25 @@ footer p {
 
 }
 
-.ant-carousel-element{
-    margin: 20px;
+.ant-carousel-element {
+    margin-right: 20px;
 }
 
-.ant-carousel-element img{
+.ant-carousel-element img {
     width: 280px;
     height: 230px;
     border: 15px solid orange;
 }
 
-.ant-carousel-element p{
+.ant-carousel-element p {
     font-size: 16px;
     font-weight: bold;
     padding-left: 50px;
     margin-top: 16px;
     position: relative;
 }
-.ant-carousel-element p::before{
+
+.ant-carousel-element p::before {
     position: absolute;
     content: "";
     width: 38px;
@@ -428,11 +452,75 @@ footer p {
     background-color: yellow;
     left: 0;
 }
+
+div.ant-carousel-arrow-left,
+div.ant-carousel-arrow-right {
+    width: 24px;
+    height: 50px;
+    position: absolute;
+    cursor: pointer;
+    z-index: 101;
+    top: 38%;
+    padding: 15px;
+}
+
+div.ant-carousel-arrow-left:hover,
+div.ant-carousel-arrow-right:hover {
+    opacity: 1;
+}
+
+/* левая стрелка слайдера */
+div.ant-carousel-arrow-left {
+    left: 0px;
+    display: block;
+    background: #53535383 url("http://pvbk.spb.ru/inc/carousel/ant-files/ant-arrow-left.png") no-repeat;
+    background-position: center;
+}
+
+/* правая стрелка слайдера */
+div.ant-carousel-arrow-right {
+    right: 0px;
+    display: block;
+    background: #53535383 url("http://pvbk.spb.ru/inc/carousel/ant-files/ant-arrow-right.png") no-repeat;
+    background-position: center;
+}
+
+/* ховер левой стрелки слайдера  */
+div.ant-carousel-arrow-left:hover,
+div.ant-carousel-arrow-right:hover {
+    opacity: 1;
+}
+
+/* контейнер с точками слайдера */
+div.ant-carousel-dots {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    left: 0;
+    bottom: 38px;
+    z-index: 30;
+    text-align: center;
+}
+
+/* точки слайдера */
+span.ant-dot {
+    width: 10px;
+    height: 10px;
+    margin: 5px 7px;
+    padding: 0;
+    display: inline-block;
+    background-color: #bbb;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
 .s4 {
     display: flex;
     flex-flow: column;
     align-items: center;
 }
+
 .s4_title {
     position: relative;
     padding: 116px 20px 0;
@@ -441,11 +529,12 @@ footer p {
     line-height: 30px;
     font-family: "GothamPro-Bold";
     text-align: center;
-    
-    
+
+
 
 }
-.s4_title::before{
+
+.s4_title::before {
     position: absolute;
     content: "";
     width: 50px;
@@ -457,15 +546,15 @@ footer p {
     left: 43%;
 }
 
-.s4_list{
+.s4_list {
     display: flex;
     flex-flow: column;
     align-items: flex-start;
-    padding: 38px 20px 68px 75px; 
+    padding: 38px 20px 68px 75px;
     position: relative;
 }
 
-.s4_list::before{
+.s4_list::before {
     position: absolute;
     content: "";
     height: 60%;
@@ -476,7 +565,7 @@ footer p {
 
 }
 
-.s4_list_item:last-child{
+.s4_list_item:last-child {
     display: none;
 }
 
@@ -486,9 +575,9 @@ footer p {
     align-items: flex-start;
     background-color: #303030;
     padding-top: 20px;
-  }
-  
-  .s5_title {
+}
+
+.s5_title {
     text-transform: uppercase;
     font-size: 18px;
     letter-spacing: 1px;
@@ -496,15 +585,15 @@ footer p {
     padding-left: 54px;
     padding-right: 75px;
     color: white;
-  }
-  
-  .s5_list {
+}
+
+.s5_list {
     padding-top: 40px;
     padding-bottom: 25px;
     position: relative;
-  }
-  
-  .s5_list:not(:first-child)::before {
+}
+
+.s5_list:not(:first-child)::before {
     position: absolute;
     content: "";
     width: 32px;
@@ -512,10 +601,10 @@ footer p {
     background-color: #ffe100;
     top: 15px;
     left: 54px;
-  }
-  
-  .s5_list-item,
-  .s5_list-contact {
+}
+
+.s5_list-item,
+.s5_list-contact {
     position: relative;
     padding-left: 95px;
     padding-right: 25px;
@@ -524,24 +613,24 @@ footer p {
     letter-spacing: 0.5px;
     color: #9c9a9a;
     line-height: 30px;
-  }
-  
-  .s5_list-contact {
+}
+
+.s5_list-contact {
     padding-left: 54px;
-  }
-  
-  .s5_list-contact a {
+}
+
+.s5_list-contact a {
     font-size: 20px;
     font-weight: bold;
     color: white;
-  }
-  
-  .s5_list-contact p {
+}
+
+.s5_list-contact p {
     font-size: 14px;
     color: #7b7b7b;
-  }
-  
-  .s5_list-item::before {
+}
+
+.s5_list-item::before {
     position: absolute;
     content: "";
     width: 32px;
@@ -551,14 +640,14 @@ footer p {
     background-repeat: no-repeat;
     top: -3px;
     left: 54px;
-  }
-  
-  .s5_list-contact:last-child p {
+}
+
+.s5_list-contact:last-child p {
     position: relative;
     padding-left: 30px;
-  }
-  
-  .s5_list-contact:last-child p::before {
+}
+
+.s5_list-contact:last-child p::before {
     position: absolute;
     content: "";
     width: 22px;
@@ -568,51 +657,54 @@ footer p {
     background-repeat: no-repeat;
     top: 4px;
     left: 0;
-  }
+}
 
-  .menu li{
-      color: red;
- }
-  
- .menu li a:hover{
-     color:blue;
-     font-size: large;
-     box-shadow: 0 0 10px rgba(0,0,0,0.5);
-     border-radius: 15%;
-     background-color: yellow;
- }
- @media (width: 768px){
-     .container{
-         width: 768px;
-     }
-     .header_nav{
-         margin: 0 40px;
-     }
-     .header .menu-icon{
-         display: none;
-     }
-     
-         .menu{
-         display: flex;
-         flex-flow: row;
-         justify-content: space-between;
-         align-items: center;
-         overflow: visible;
+.menu li {
+    color: red;
+}
 
-     }
+.menu li a:hover {
+    color: blue;
+    font-size: large;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 15%;
+    background-color: yellow;
+}
 
-     .menu li{
-         margin-right: 10px;
+@media (width: 768px) {
+    .container {
+        width: 768px;
+    }
+
+    .header_nav {
+        margin: 0 40px;
+    }
+
+    .header .menu-icon {
+        display: none;
+    }
+
+    .menu {
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+        align-items: center;
+        overflow: visible;
+
+    }
+
+    .menu li {
+        margin-right: 10px;
         padding-left: 20px;
     }
 
-      .menu li:nth-child(1) {
-          position: relative;
+    .menu li:nth-child(1) {
+        position: relative;
 
-      }
-     
-      .menu li:nth-child(1)::after{
-        content: "";  
+    }
+
+    .menu li:nth-child(1)::after {
+        content: "";
         position: absolute;
         width: 2px;
         height: 22px;
@@ -620,338 +712,359 @@ footer p {
         top: 0;
         right: -7px;
     }
-    .s1{
+
+    .s1 {
         padding: 253px 40px 0;
     }
-    .s1_title{
+
+    .s1_title {
         font-size: 50px;
 
     }
-     .s1_list_item{
-         font-size: 20px;
-     }
-     .s1_list_item::before{
-         top: 4px;
-     }
 
-    .s2_list{
+    .s1_list_item {
+        font-size: 20px;
+    }
+
+    .s1_list_item::before {
+        top: 4px;
+    }
+
+    .s2_list {
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
         margin-right: 20px;
     }
-    .s2_list:last-child{
+
+    .s2_list:last-child {
         margin-right: 0;
     }
-    .s2_title{
+
+    .s2_title {
         font-size: 38px;
         padding: 80px 129px 0;
     }
-    .ant-carousel-hider{
+
+    .ant-carousel-hider {
         width: 768px;
+        margin: 0 40px;
     }
-    .ant-carousel-element img{
+
+    .ant-carousel-element img {
         width: 334px;
         height: 240px;
 
     }
-    .s4{
+
+    .s4 {
         align-items: flex-start;
 
     }
-    .s4_list{
+
+    .s4_list {
         padding: 38px 20px 80px 306px;
     }
-    .s4_title{
-        padding: 84px 72px 0 156px ;
+
+    .s4_title {
+        padding: 84px 72px 0 156px;
         font-size: 23px;
         text-align: left;
     }
-    .s4_list_item:last-child{
+
+    .s4_list_item:last-child {
         display: block;
     }
-    .s4_list::before{
+
+    .s4_list::before {
         height: 60%;
         top: 15%;
         left: 306px;
 
     }
+
     .s4_title::before {
-       width: 75px;
-       height: 50px;
-       background: url(../images/kavychki.png);
-       top: 58%;
-       left: 7%;
+        width: 75px;
+        height: 50px;
+        background: url(../images/kavychki.png);
+        top: 58%;
+        left: 7%;
     }
-    .s5{
+
+    .s5 {
         flex-flow: row wrap;
         padding-left: 129px;
         padding-top: 79px;
     }
-    .s5 div{
+
+    .s5 div {
         width: 246px;
         margin-right: 20px;
         margin-bottom: 40px;
     }
-    .s5_list{
+
+    .s5_list {
         padding: 0;
     }
-    .s5_list:not(:first-child){
+
+    .s5_list:not(:first-child) {
         top: 42px;
     }
-    .s5_list:not(:first-child)::before{
+
+    .s5_list:not(:first-child)::before {
         left: 0;
         top: -20px;
 
     }
-    
 
-    
+
+
     .s5_list-contact,
-    .s5_list-item{
+    .s5_list-item {
         margin: 0;
         padding: 0;
     }
-    .s5_list-item{
+
+    .s5_list-item {
         padding-left: 35px;
     }
-    .s5_list-item::before{
+
+    .s5_list-item::before {
         top: 0px;
         left: 0px;
 
     }
-    .s5_title{
+
+    .s5_title {
         padding: 0;
     }
-    footer{
+
+    footer {
         padding: 22px 0;
     }
-    footer p{
+
+    footer p {
         font-size: 14px;
     }
 }
-    
-    
-    
-    @media(width: 1280px){
-        
-        .container {
-          width: 1280px;
-        }
-        .header_nav {
-            margin: 0 60px;
-            padding: 34px 0 34px 55px;
-        }
-        .header .menu-icon {
-            display: none;
-        }
-        .menu {
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: space-between;
-            overflow: visible;
-        }
-    
-        .menu li {
-            margin-right: 20px;
-        }
-    
-        .menu li:nth-child(1) {
-            position: relative;
-        }
-    
-        .menu li:nth-child(1)::after {
-            content: "";
-            position: absolute;
-            width: 2px;
-            height: 22px;
-            background: grey;
-            top: 0;
-            right: -12px;
-        }
-        .s1 {
-            padding-top: 330px;
-            padding-left: 159px;
-           
-        }
-    
-        .s1_title {
-            font-size: 72px;
-        }
-    
-        .s1_list {
-            padding-bottom: 170px;
-        }
-    
-        .s1_list-item {
-            font-size: 24px;
-        }
-    
-        .s1_list-item::before {
-            top: 7px;
-        }
-        .s2_title {
-            font-size: 44px;
-            padding: 80px 355px 0;
-        }
-    
-        .s2_list {
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: space-between;
-            padding-bottom: 30px;
-        }
-    
-        .s2_list-item {
-            margin-right: 20px;
-        }
-    
-        .s2_list-item:last-child {
-            margin-right: 0;
-        }
-        .ant-carousel-hider {
-            width: 1280px;
-            margin: 0 60px;
-        }
-    
-        .ant-carousel-element {
-            margin: 0 20px 0 0;
-        }
-    
-        .ant-carousel-element img {
-            width: 570px;
-            height: 344px;
-        }
-        .s4 {
-            align-items: flex-start;
-        }
-    
-        .s4_title {
-            padding: 84px 62px 0 315px;
-            text-align: left;
-        }
-    
-        .s4_title::before {
-            width: 110px;
-            height: 73px;
-            background: url(../image/icons/s4_desktop-icon.png);
-            top: 53%;
-            left: 14%;
-        }
-    
-        .s4_title p {
-            font-size: 34px;
-            letter-spacing: 3.5px;
-            line-height: 42px;
-        }
-    
-        .s4_list {
-            padding: 38px 20px 80px 677px;
-        }
-    
-        .s4_list::before {
-            height: 60%;
-            border: 1px solid #ffe100;
-            top: 15%;
-            left: 650px;
-        }
-    
-        .s4_list-item:last-child {
-            display: block;
-        }
-        .s5 {
-            flex-flow: row wrap;
-            padding: 79px 237px 0;
-            justify-content: space-between;
-        }
-    
-        .s5 div {
-            width: 246px;
-            margin-bottom: 74px;
-        }
-    
-        .s5_list:not(:first-child) {
-            padding-top: 42px;
-        }
-    
-        .s5_list:not(:first-child)::before {
-            left: 0;
-            top: 20px
-        }
-    
-        .s5_list,
-        .s5_list-contact,
-        .s5_list-item,
-        .s5_title {
-            padding: 0;
-            margin: 0;
-        }
-    
-        .s5_list-item {
-            padding-left: 35px;
-        }
-    
-        .s5_list-item::before {
-            top: 0px;
-            left: 0px;
-        }
-    
-        .s5 div:last-of-type {
-            width: 700px;
-        }
-    
-        .s5 div:last-of-type ul,
-        .s5_list-contact {
-            display: flex;
-            flex-flow: row;
-        }
-    
-        .s5_list-contact p {
-            margin: 0 10px;
-        }
-    
-        .s5_list-contact:first-child {
-            position: relative;
-            padding-right: 20px;
-        }
-    
-        .s5_list-contact:first-child::after {
-            position: absolute;
-            content: "";
-            width: 2px;
-            height: 28px;
-            background: grey;
-            top: 0;
-            right: 10px;
-        }
-    
-        .s5_list-contact:nth-of-type(2) {
-            padding-left: 30px;
-        }
-    
-        .s5_list-contact:last-child p {
-            padding: 0
-        }
-    
-        .s5_list-contact:last-child p::before {
-            left: -216px;
-        }
-    
-        /* FOOTER */
-        footer {
-            padding: 22px 0;
-        }
-    
-        footer p {
-            font-size: 14px;
-        }
-        
+
+
+
+@media(width: 1280px) {
+
+    .container {
+        width: 1280px;
     }
 
-    
+    .header_nav {
+        margin: 0 60px;
+        padding: 34px 0 34px 55px;
+    }
 
+    .header .menu-icon {
+        display: none;
+    }
 
-    
- 
-    
+    .menu {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        overflow: visible;
+    }
 
+    .menu li {
+        margin-right: 20px;
+    }
+
+    .menu li:nth-child(1) {
+        position: relative;
+    }
+
+    .menu li:nth-child(1)::after {
+        content: "";
+        position: absolute;
+        width: 2px;
+        height: 22px;
+        background: grey;
+        top: 0;
+        right: -12px;
+    }
+
+    .s1 {
+        padding-top: 330px;
+        padding-left: 159px;
+
+    }
+
+    .s1_title {
+        font-size: 72px;
+    }
+
+    .s1_list {
+        padding-bottom: 170px;
+    }
+
+    .s1_list-item {
+        font-size: 24px;
+    }
+
+    .s1_list-item::before {
+        top: 7px;
+    }
+
+    .s2_title {
+        font-size: 44px;
+        padding: 80px 355px 0;
+    }
+
+    .s2_list {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        padding-bottom: 30px;
+    }
+
+    .s2_list-item {
+        margin-right: 20px;
+    }
+
+    .s2_list-item:last-child {
+        margin-right: 0;
+    }
+
+    .ant-carousel-hider {
+        width: 1280px;
+        margin: 0 60px;
+    }
+
+    .ant-carousel-element img {
+        width: 570px;
+        height: 344px;
+    }
+
+    .s4 {
+        align-items: flex-start;
+    }
+
+    .s4_title {
+        padding: 84px 62px 0 315px;
+        text-align: left;
+    }
+
+    .s4_title::before {
+        width: 110px;
+        height: 73px;
+        background: url(../image/icons/s4_desktop-icon.png);
+        top: 53%;
+        left: 14%;
+    }
+
+    .s4_title p {
+        font-size: 34px;
+        letter-spacing: 3.5px;
+        line-height: 42px;
+    }
+
+    .s4_list {
+        padding: 38px 20px 80px 677px;
+    }
+
+    .s4_list::before {
+        height: 60%;
+        border: 1px solid #ffe100;
+        top: 15%;
+        left: 650px;
+    }
+
+    .s4_list-item:last-child {
+        display: block;
+    }
+
+    .s5 {
+        flex-flow: row wrap;
+        padding: 79px 237px 0;
+        justify-content: space-between;
+    }
+
+    .s5 div {
+        width: 246px;
+        margin-bottom: 74px;
+    }
+
+    .s5_list:not(:first-child) {
+        padding-top: 42px;
+    }
+
+    .s5_list:not(:first-child)::before {
+        left: 0;
+        top: 20px
+    }
+
+    .s5_list,
+    .s5_list-contact,
+    .s5_list-item,
+    .s5_title {
+        padding: 0;
+        margin: 0;
+    }
+
+    .s5_list-item {
+        padding-left: 35px;
+    }
+
+    .s5_list-item::before {
+        top: 0px;
+        left: 0px;
+    }
+
+    .s5 div:last-of-type {
+        width: 700px;
+    }
+
+    .s5 div:last-of-type ul,
+    .s5_list-contact {
+        display: flex;
+        flex-flow: row;
+    }
+
+    .s5_list-contact p {
+        margin: 0 10px;
+    }
+
+    .s5_list-contact:first-child {
+        position: relative;
+        padding-right: 20px;
+    }
+
+    .s5_list-contact:first-child::after {
+        position: absolute;
+        content: "";
+        width: 2px;
+        height: 28px;
+        background: grey;
+        top: 0;
+        right: 10px;
+    }
+
+    .s5_list-contact:nth-of-type(2) {
+        padding-left: 30px;
+    }
+
+    .s5_list-contact:last-child p {
+        padding: 0
+    }
+
+    .s5_list-contact:last-child p::before {
+        left: -216px;
+    }
+
+    /* FOOTER */
+    footer {
+        padding: 22px 0;
+    }
+
+    footer p {
+        font-size: 14px;
+    }
+
+}
